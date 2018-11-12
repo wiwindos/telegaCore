@@ -1,4 +1,4 @@
-<?
+<php
 class GetDataFromChat {
 	
 	public static function setData($messageId){
@@ -286,18 +286,17 @@ class webHook {
 	}
 }
 
-class Logs {	
+class Logs {
 	public static function setLog(){
 		$time = date('G:i:s, F j, Y');
 		$date = date('F_j,Y');
 		$file = './logs/'.$date.'.log';
-		$data = file_get_contents("php://input");
+		$datas = file_get_contents("php://input");
 
-		if( strlen($data) > 10 ) { //писать лог
+		if( strlen($datas) > 10 ) {
 			$handle = fopen($file, "a");
 			$fwrite = fwrite($handle, $data."|\n");
 			fclose($handle);
 		}
 	}
 }
-?>

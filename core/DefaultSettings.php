@@ -1,5 +1,6 @@
 <?
 final class DefaultSettings {
+    //https://api.telegram.org/bot410244451:AAGrJ83kT1E0ohx_lgLPmw4OY_QjkIM/setWebhook?url=https://xxx.xx/bot/.php
     static protected $token = getenv('TOKEN');
 	//static protected $token = "";						//токен
 	
@@ -24,5 +25,5 @@ final class DefaultSettings {
 	}
 }
 
-//https://api.telegram.org/bot410244451:AAGrJ83kT1E0ohx_lgLPmw4OY_QjkIWHTIM/setWebhook?url=https://xxx.xx/bot/.php
+
 ?>
