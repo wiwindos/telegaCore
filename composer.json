@@ -1,0 +1,7 @@
+{
+    "name": "telegaCore",
+    "description": "clear bot",
+    "require": {
+        "php": "^7.0"
+    }
+}
