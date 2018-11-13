@@ -9,10 +9,7 @@ class Methods {
 	    
         $obj = new GetToken();
         self::$token = $obj->token();
-	    echo(self::$token);
 	    $url ='';
-		//self::$token = getenv('TOKEN');
-		//self::$token = DefaultSettings::getToken();
 		
 		$token = self::$token;
 		$method = self::$method;

@@ -12,5 +12,6 @@ $stream = webHook::getData();					//подрубаем входящие данн
 /*if ( isset($data[message][entities]) ){}*/
 
 /*/////////////////////////////////////// обновление BD, большой кейс (проверка состояния по сессии, инлайн, сообщения с команд, кнопок и тд)*/
-SendMessage::send("DAROVA");
+$a = Message::getText();
+SendMessage::send($a);
 ?>
