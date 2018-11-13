@@ -15,5 +15,5 @@ $stream = webHook::getData();					//подрубаем входящие данн
 SendMessage::send("DAROVA");
 
 echo(getenv('TOKEN'));
-echo($_ENV['TOKEN']);
+//echo($_ENV['TOKEN']);
 ?>
