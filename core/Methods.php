@@ -4,12 +4,13 @@ class Methods {
 	static protected $token = "null";
 	static protected $method = "null";
 	static protected $param = "null";
-	
-	static function send(){
-	    
-	    function __construct() {
+		    function __construct() {
         $this->token = getenv('TOKEN');
         }
+        
+	static function send(){
+	    
+
 	    echo(self::$token);
 	    $url ='';
 		//self::$token = getenv('TOKEN');
