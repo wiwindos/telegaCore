@@ -1,7 +1,7 @@
 <?php
 final class DefaultSettings {
     
-    protected $token = null;
+    static protected $token = null;
 
     function __construct() {
         $this->token = getenv('TOKEN');
