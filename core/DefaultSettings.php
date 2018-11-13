@@ -3,7 +3,7 @@ class GetToken{
     static $token = null;
 
     function __construct() {
-        self::$token = "s";
+        self::$token = getenv('TOKEN');
     }
     
     function token(){
