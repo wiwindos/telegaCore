@@ -10,7 +10,7 @@ class Methods {
 	    function __construct() {
         $this->token = getenv('TOKEN');
         }
-	    
+	    echo(self::$token);
 	    $url ='';
 		//self::$token = getenv('TOKEN');
 		//self::$token = DefaultSettings::getToken();
