@@ -14,7 +14,7 @@ session_id(Message::getChatId());	//сессия
 /*/////////////////////////////////////// обновление BD, большой кейс (проверка состояния по сессии, инлайн, сообщения с команд, кнопок и тд)*/
 
 if(Message::getText() == "1"){
-    $msg = "Здравствуй,".Message::getFromFirstName()."!";
+    $msg = "Здравствуй, ".Message::getFromFirstName()."!";
     SendMessage::send($msg);
 }
 $a = Message::getText();
