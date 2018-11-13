@@ -6,8 +6,13 @@ class Methods {
 	static protected $param = "null";
 	
 	static function send(){
+	    
+	    function __construct() {
+        $this->token = getenv('TOKEN');
+        }
+	    
 	    $url ='';
-		self::$token = getenv('TOKEN')
+		//self::$token = getenv('TOKEN');
 		//self::$token = DefaultSettings::getToken();
 		
 		$token = self::$token;
