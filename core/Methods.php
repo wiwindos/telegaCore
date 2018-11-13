@@ -6,6 +6,7 @@ class Methods {
 	static protected $param = "null";
 	
 	static function send(){
+	    $url ='';
 		self::$token = DefaultSettings::getToken();
 		
 		$token = self::$token;
@@ -26,7 +27,7 @@ class Methods {
 }
 
 class SendMessage extends Methods {														//обычная отправка сообщения
-	static function send($text){
+	static function send($text = null){
 		self::$method = "sendMessage";
 		$chat_id = Message::getChatId();
 		self::$param = array("chat_id"=>$chat_id,"text"=>$text);
@@ -117,7 +118,7 @@ class KeyboardButton extends Methods {											//клавиатура
 	static private $selective = false;
 	static private $column = 1;
 	
-	static function send($message){
+	static function send($message = null){
 		$keyboard = array(	"keyboard" => self::$btn,
 							"resize_keyboard" => self::$resizeKeyboard, 	// уменьшить размер кнопок
 							"one_time_keyboard" => self::$oneTimeKeyboard, 	// скрыть клаву после нажатия		
@@ -177,7 +178,7 @@ class KeyboardButton extends Methods {											//клавиатура
 	static protected $column = 1;
 	static private $keyboard = array();
 	
-	static function send($message){
+	static function send($message = null){
 		$keyboard = array(
 		"inline_keyboard" => self::$btn
 		);		

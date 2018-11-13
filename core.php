@@ -1,9 +1,7 @@
-<php
-echo("12");
-exit;
-include_once('./core/GetDataFromChat.php');
-include_once('./core/Methods.php');
-include_once('./core/DefaultSettings.php');
+<?php
+include_once (dirname(__FILE__).'/core/GetDataFromChat.php');
+include_once (dirname(__FILE__).'/core/Methods.php');
+include_once (dirname(__FILE__).'/core/DefaultSettings.php');
 
 $stream = webHook::getData();					//подрубаем входящие данные
 //$logs = Logs::setLog();							//подрубаем логи
@@ -15,3 +13,6 @@ $stream = webHook::getData();					//подрубаем входящие данн
 
 /*/////////////////////////////////////// обновление BD, большой кейс (проверка состояния по сессии, инлайн, сообщения с команд, кнопок и тд)*/
 SendMessage::send("DAROVA");
+
+echo("12");
+?>

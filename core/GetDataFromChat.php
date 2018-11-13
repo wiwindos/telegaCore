@@ -1,4 +1,4 @@
-<php
+<?php
 class GetDataFromChat {
 	
 	public static function setData($messageId){
@@ -24,18 +24,18 @@ class Message extends GetDataFromChat{
 	static protected  $chatUsername = "null";
 	static protected  $chatType = "null";
 	
-	public static function setData(	$messageId,
-									$date,
-									$text,
-									$fromId,
-									$fromIsBot,
-									$fromFirstName,
-									$fromUserName,
-									$fromLanguageCode,
-									$chatId,
-									$chatFirstName,
-									$chatUsername,
-									$chatType ){
+	public static function setData(	$messageId = null,
+									$date = null,
+									$text = null,
+									$fromId = null,
+									$fromIsBot = null,
+									$fromFirstName = null,
+									$fromUserName = null,
+									$fromLanguageCode = null,
+									$chatId = null,
+									$chatFirstName = null,
+									$chatUsername = null,
+									$chatType  = null){
 		//parent::setData(	$messageId );
 		self::$messageId = $messageId;
 		self::$date = $date;
@@ -91,18 +91,18 @@ class Message extends GetDataFromChat{
 	}
 }
 
-class MessageForwardFrom extends Message{
+/*class MessageForwardFrom extends Message{
 	static protected  $messageForwardFromId = "null";
 	static protected  $messageForwardFromIsBot = "null";
 	static protected  $messageForwardFromFirstName = "null";
 	static protected  $messageForwardFromUsername = "null";
 	static protected  $messageForwardFromLanguageCode = "null";
 	
-	public static function setData(	$messageForwardFromId,
-									$messageForwardFromIsBot,
-									$messageForwardFromFirstName,
-									$messageForwardFromUsername,
-									$messageForwardFromLanguageCode ){
+	public static function setData(	$messageForwardFromId = null,
+									$messageForwardFromIsBot = null,
+									$messageForwardFromFirstName = null,
+									$messageForwardFromUsername = null,
+									$messageForwardFromLanguageCode = null){
 		self::$messageForwardFromId = $messageForwardFromId;
 		self::$messageForwardFromIsBot = $messageForwardFromIsBot;
 		self::$messageForwardFromFirstName = $messageForwardFromFirstName;
@@ -228,7 +228,7 @@ class CallbackQuery extends Message{
 		return self::$messageId." ".self::$date." ".self::$text." ".self::$fromId." ".self::$fromIsBot." ".self::$fromFirstName." ".self::$fromUserName." ".self::$fromLanguageCode." ".self::$chatId." ".self::$chatFirstName." ".self::$chatUsername." ".self::$chatType." ".self::$callbackQueryId." ".self::$callbackQueryChatInstance." ".self::$callbackQueryData." ".self::$callbackQueryFromId." ".self::$callbackQueryFromIsBot." ".self::$callbackQueryFromFirstName." ".self::$callbackQueryFromUsername;
 	} 
 }
-
+*/
 class webHook {
 	public static function getData(){
 		$data = file_get_contents("php://input");
@@ -300,3 +300,4 @@ class Logs {
 		}
 	}
 }
+?>
