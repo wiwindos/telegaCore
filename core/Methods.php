@@ -5,13 +5,10 @@ class Methods {
 	static protected $method = "null";
 	static protected $param = "null";
 	
-		    function __construct() {
-        self::$token = getenv('TOKEN');
-        }
-        
 	static function send(){
 	    
-
+        $obj = new GetToken();
+        self::$token = $obj->token();
 	    echo(self::$token);
 	    $url ='';
 		//self::$token = getenv('TOKEN');

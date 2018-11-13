@@ -1,4 +1,16 @@
 <?php
+class GetToken{
+    static $token = null;
+
+    function __construct() {
+        self::$token = "s";
+    }
+    
+    function token(){
+        return self::$token;
+    }
+}
+
 final class DefaultSettings {
     
  /*   static protected $token = null;
