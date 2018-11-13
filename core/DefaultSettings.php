@@ -1,11 +1,11 @@
 <?php
 final class DefaultSettings {
     
-    static protected $token = null;
+ /*   static protected $token = null;
 
     function __construct() {
         $this->token = getenv('TOKEN');
-    }
+    }*/
     
     //https://api.telegram.org/bot410244451:AAGrJ83kT1E0ohx_lgLPmwM/setWebhook?url=https://xxx.xx/bot/.php
     //public $token = getenv('TOKEN');

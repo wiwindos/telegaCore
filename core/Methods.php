@@ -7,7 +7,8 @@ class Methods {
 	
 	static function send(){
 	    $url ='';
-		self::$token = DefaultSettings::getToken();
+		self::$token = getenv('TOKEN')
+		//self::$token = DefaultSettings::getToken();
 		
 		$token = self::$token;
 		$method = self::$method;
